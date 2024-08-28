@@ -9,7 +9,7 @@
   border-radius: 16px;
   background: rgba(0, 0, 0, 0.02);
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 }
 
 .container-square.active {
@@ -23,7 +23,7 @@
   height: 100px;
   border-radius: 12px;
   background: #ececec;
-  transition: 0.3s ease, transform 0.3 ease;
+  transition: 0.5s ease, transform 0.5s ease;
 }
 
 .smaller-square.active {
