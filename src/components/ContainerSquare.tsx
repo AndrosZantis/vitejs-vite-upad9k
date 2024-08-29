@@ -35,8 +35,8 @@ const ContainerSquare: React.FC = () => {
     <div
       className={`container-square ${isActive ? 'active' : 'inactive'}`}
       onClick={toggleActiveState}
-      onKeyDown={handleKeyDown} //keyboard interaction
-      tabIndex={0} //focus on div
+      onKeyDown={handleKeyDown} //keyboard interaction with enter or space
+      tabIndex={0} //makes the container focusable
       role='button'
       aria-pressed={isActive} //make pressed state known
     >
