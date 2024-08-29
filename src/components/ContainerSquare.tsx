@@ -24,10 +24,21 @@ const ContainerSquare: React.FC = () => {
     setIsActive(!isActive);
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if( event.key === 'Enter' || event.key === ' '){
+      event.preventDefault();
+      toggleActiveState();
+    }
+  }
+
   return (
     <div
       className={`container-square ${isActive ? 'active' : 'inactive'}`}
       onClick={toggleActiveState}
+      onKeyDown={handleKeyDown} //keyboard interaction
+      tabIndex={0} //focus on div
+      role='button'
+      aria-pressed={isActive} //make pressed state known
     >
       <div className={`smaller-square ${isActive? 'active' : 'inactive'}`}></div>
     </div>
